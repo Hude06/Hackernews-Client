@@ -177,5 +177,6 @@ button span {
     "Helvetica Neue",
     sans-serif;
   margin-top: -3vh;
-  text-overflow: clip;
+  margin-left: -5px;
+  text-overflow: "";
 }
