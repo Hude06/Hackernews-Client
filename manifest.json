@@ -1,0 +1,7 @@
+{
+  "name": "Hacker News",
+  "short_name": "Hack News",
+  "description": "Simple client for the Hacker News API",
+  "start_url": "/",
+  "display": "standalone"
+}
