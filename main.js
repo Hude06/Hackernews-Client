@@ -75,7 +75,7 @@ async function createPostElement(id) {
   const newH3 = document.createElement("h3");
   window.innerWidth;
   let line = "";
-  for (let i = 0; i < window.innerWidth; i++) {
+  for (let i = 0; i < 200; i++) {
     line += "-";
   }
   newH3.textContent = line;
