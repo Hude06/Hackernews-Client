@@ -4,6 +4,8 @@ let popup_content = document.getElementById("popup-content");
 let feed = document.getElementById("feed");
 let back = document.getElementById("back");
 let menubar = document.getElementById("menubar");
+let topbar = document.getElementById("topbar");
+let links = [];
 back.style.display = "none";
 function decodeAndProcessText(encodedText) {
   // Decode HTML entities
@@ -25,6 +27,15 @@ async function popup(data, kids) {
   //     popup_content.removeChild(popup_content.firstChild);
   // }
   popup_content.innerHTML = "";
+  const link = document.createElement("button");
+  link.textContent = "Link";
+  console.log(data.url);
+  link.classList.add("link");
+  links.push(link);
+  link.addEventListener("click", () => {
+    window.location.href = data.url;
+  });
+  topbar.appendChild(link);
   for (let i = 0; i < kids.length; i++) {
     if (kids[i]) {
       back.style.display = "flex";
@@ -61,6 +72,9 @@ back.addEventListener("click", function () {
   popup_window.style.display = "none";
   feed.style.display = "flex";
   back.style.display = "none";
+  for (let i = 0; i < links.length; i++) {
+    links[i].style.display = "none";
+  }
 });
 
 async function createPostElement(id) {
@@ -69,24 +83,18 @@ async function createPostElement(id) {
 
   const newPostDiv = document.createElement("div");
   newPostDiv.classList.add("post");
-
-  // const newH3 = document.createElement('h3');
   const newH3_1 = document.createElement("h3");
   const newH3 = document.createElement("h3");
-  window.innerWidth;
   let line = "";
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 1000; i++) {
     line += "-";
   }
-  console.log(line);
-  console.log("Testing");
   newH3.textContent = line;
   newH3.classList.add("LINE");
   newH3_1.textContent = data.title;
   newH3_1.classList.add("title");
   newPostDiv.appendChild(newH3_1);
   newPostDiv.appendChild(newH3);
-
   newPostDiv.addEventListener("click", async function () {
     // Fetch each kid's data
     let kidsData = [];

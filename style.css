@@ -182,3 +182,14 @@ button span {
   margin-left: -5px;
   text-overflow: " ";
 }
+a {
+  width: 200px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid red;
+}
+.link {
+  position: absolute;
+  left: 5vw;
+}
