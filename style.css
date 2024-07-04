@@ -68,6 +68,7 @@ h2 {
   height: 50px;
   align-items: center;
   justify-content: center;
+
   font-size: 15pt;
 }
 .feed .title {
@@ -161,10 +162,6 @@ button span {
 .commentP {
   color: white;
 }
-#back {
-  position: absolute;
-  left: 0;
-}
 .LINE {
   font-family:
     system-ui,
@@ -188,8 +185,4 @@ a {
   text-decoration: none;
   font-size: 20px;
   border: 2px solid red;
-}
-.link {
-  position: absolute;
-  left: 5vw;
 }
